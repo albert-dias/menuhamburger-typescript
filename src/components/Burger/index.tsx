@@ -3,10 +3,10 @@ import { StyledBurger } from './styles';
 
 interface BurgerProps{
   open: boolean;
-  setOpen: () => void;
+  setOpen: (open: boolean) => void;
 }
 
-const Burger: React.FC<BurgerProps> = ({ open, setOpen}) => {
+const Burger: React.FC<BurgerProps> = ({ open, setOpen }) => {
   return (
     <StyledBurger open={open} onClick={() => setOpen(!open)}>
       <div />

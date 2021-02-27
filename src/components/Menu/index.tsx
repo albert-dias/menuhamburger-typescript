@@ -3,9 +3,10 @@ import { StyledMenu } from './styles';
 
 interface MenuProps{
   open: boolean;
+  setOpen: (open: boolean) => void;
 }
 
-const Menu: React.FC = ({ open }) => {
+const Menu: React.FC<MenuProps> = ({ open, setOpen }) => {
   return (
     <StyledMenu open={open}>
       <a href="/">
